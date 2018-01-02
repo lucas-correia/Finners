@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74E5E04D49E1E3DD6810BBFA /* Pods_Project_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2A875AFA762C8BAE58C400 /* Pods_Project_Swift.framework */; };
+		3DF68E381FFC386A00ACAD16 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF68E371FFC386A00ACAD16 /* Repository.swift */; };
+		AD7008FEB8F67BEB2D19F0BC /* Pods_FinnersTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF571170F4FD473A16A4444 /* Pods_FinnersTest.framework */; };
 		E73AC19D1EFC2AE100A54069 /* sidemenu-line-separator.png in Resources */ = {isa = PBXBuildFile; fileRef = E73AC19C1EFC2AE100A54069 /* sidemenu-line-separator.png */; };
 		E73AC1A11EFC335100A54069 /* sidemenu-icon-menubutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E73AC19F1EFC335100A54069 /* sidemenu-icon-menubutton@2x.png */; };
 		E73AC1A21EFC335100A54069 /* sidemenu-icon-menubutton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E73AC1A01EFC335100A54069 /* sidemenu-icon-menubutton@3x.png */; };
@@ -148,7 +149,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8AC2E5DAB29284B39A646427 /* Pods-Project-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project-Swift/Pods-Project-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		204D22F5AD0F16A4E8D38B1C /* Pods-FinnersTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinnersTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinnersTest/Pods-FinnersTest.debug.xcconfig"; sourceTree = "<group>"; };
+		3DF68E371FFC386A00ACAD16 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		6EF571170F4FD473A16A4444 /* Pods_FinnersTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinnersTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72741E967D06FC4280F5707C /* Pods-FinnersTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinnersTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinnersTest/Pods-FinnersTest.release.xcconfig"; sourceTree = "<group>"; };
 		E73AC19C1EFC2AE100A54069 /* sidemenu-line-separator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidemenu-line-separator.png"; sourceTree = "<group>"; };
 		E73AC19F1EFC335100A54069 /* sidemenu-icon-menubutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidemenu-icon-menubutton@2x.png"; sourceTree = "<group>"; };
 		E73AC1A01EFC335100A54069 /* sidemenu-icon-menubutton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidemenu-icon-menubutton@3x.png"; sourceTree = "<group>"; };
@@ -280,7 +284,6 @@
 		E7FD7ABB1E8EDA5100772AF0 /* tic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = tic.m4a; sourceTree = "<group>"; };
 		E7FD7AD31E8EDB0700772AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E7FD7AD51E8EDB0A00772AF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EA0397EC974164C16E8900C6 /* Pods-Project-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project-Swift/Pods-Project-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		FC2A875AFA762C8BAE58C400 /* Pods_Project_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -293,7 +296,7 @@
 				E7ED1C9D1E950B4600D26C7B /* SCLAlertView.framework in Frameworks */,
 				E7CA536F1E8E904500CBC955 /* Alamofire.framework in Frameworks */,
 				E7CA53701E8E904500CBC955 /* SwiftyJSON.framework in Frameworks */,
-				74E5E04D49E1E3DD6810BBFA /* Pods_Project_Swift.framework in Frameworks */,
+				AD7008FEB8F67BEB2D19F0BC /* Pods_FinnersTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +325,7 @@
 				E7CA536D1E8E904500CBC955 /* Alamofire.framework */,
 				E7CA536E1E8E904500CBC955 /* SwiftyJSON.framework */,
 				FC2A875AFA762C8BAE58C400 /* Pods_Project_Swift.framework */,
+				6EF571170F4FD473A16A4444 /* Pods_FinnersTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -329,8 +333,8 @@
 		7A0D7F2C947A72BF6458AA3B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8AC2E5DAB29284B39A646427 /* Pods-Project-Swift.debug.xcconfig */,
-				EA0397EC974164C16E8900C6 /* Pods-Project-Swift.release.xcconfig */,
+				204D22F5AD0F16A4E8D38B1C /* Pods-FinnersTest.debug.xcconfig */,
+				72741E967D06FC4280F5707C /* Pods-FinnersTest.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -493,6 +497,7 @@
 			children = (
 				E7A00FF41E8E853B0050EDD3 /* Reference */,
 				E76CEF371F0A570900BCA6CF /* User.swift */,
+				3DF68E371FFC386A00ACAD16 /* Repository.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -874,8 +879,8 @@
 				TargetAttributes = {
 					E7A00FA51E8E81FF0050EDD3 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 659DAQWD6V;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = UMUQY6W9LD;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 0;
@@ -1035,13 +1040,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FinnersTest-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C6729B5422CBCD9FFE2FC61F /* [CP] Copy Pods Resources */ = {
@@ -1056,7 +1064,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Project-Swift/Pods-Project-Swift-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinnersTest/Pods-FinnersTest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D5D5EF1EC483114D197156C0 /* [CP] Embed Pods Frameworks */ = {
@@ -1065,13 +1073,26 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FinnersTest/Pods-FinnersTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GZIP/GZIP.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GZIP.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Project-Swift/Pods-Project-Swift-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinnersTest/Pods-FinnersTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1107,6 +1128,7 @@
 				E7B035DC1EC4D1CD00C669C9 /* RPCircularProgress.swift in Sources */,
 				E7B91A051EFBEF3800DB1950 /* SideMenuVC.swift in Sources */,
 				E74E59ED1F28BD8000F2F6FA /* MainMenuVC.swift in Sources */,
+				3DF68E381FFC386A00ACAD16 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1283,40 +1305,42 @@
 		};
 		E7A00FCF1E8E81FF0050EDD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AC2E5DAB29284B39A646427 /* Pods-Project-Swift.debug.xcconfig */;
+			baseConfigurationReference = 204D22F5AD0F16A4E8D38B1C /* Pods-FinnersTest.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 659DAQWD6V;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UMUQY6W9LD;
 				INFOPLIST_FILE = FinnersTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.atlantic.FinnersTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "07654c6c-7fab-4a2d-9cd7-ea1c402ea7b0";
-				PROVISIONING_PROFILE_SPECIFIER = "Project-Swift";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		E7A00FD01E8E81FF0050EDD3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA0397EC974164C16E8900C6 /* Pods-Project-Swift.release.xcconfig */;
+			baseConfigurationReference = 72741E967D06FC4280F5707C /* Pods-FinnersTest.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 659DAQWD6V;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UMUQY6W9LD;
 				INFOPLIST_FILE = FinnersTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.atlantic.FinnersTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "07654c6c-7fab-4a2d-9cd7-ea1c402ea7b0";
-				PROVISIONING_PROFILE_SPECIFIER = "Project-Swift";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

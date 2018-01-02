@@ -6,7 +6,7 @@ target 'FinnersTest' do
 pod 'Alamofire', ‘4’
 pod 'SwiftyJSON'
 pod 'SCLAlertView', '~> 0.7'
-pod 'GzipSwift'
+pod 'GZIP', '~> 1.2'
 pod 'Kingfisher', '~> 3.0'
 pod 'NVActivityIndicatorView', '~> 3.6'
 

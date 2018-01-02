@@ -65,3 +65,147 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+FinnersTest/Podfile.lock
+FinnersTest/Pods/Manifest.lock
+FinnersTest/Pods/Alamofire/LICENSE
+FinnersTest/Pods/Alamofire/README.md
+FinnersTest/Pods/Alamofire/Source/AFError.swift
+FinnersTest/Pods/Alamofire/Source/Alamofire.swift
+FinnersTest/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+FinnersTest/Pods/Alamofire/Source/MultipartFormData.swift
+FinnersTest/Pods/Alamofire/Source/NetworkReachabilityManager.swift
+FinnersTest/Pods/Alamofire/Source/Notifications.swift
+FinnersTest/Pods/Alamofire/Source/ParameterEncoding.swift
+FinnersTest/Pods/Alamofire/Source/Request.swift
+FinnersTest/Pods/Alamofire/Source/Response.swift
+FinnersTest/Pods/Alamofire/Source/ResponseSerialization.swift
+FinnersTest/Pods/Alamofire/Source/Result.swift
+FinnersTest/Pods/Alamofire/Source/ServerTrustPolicy.swift
+FinnersTest/Pods/Alamofire/Source/SessionDelegate.swift
+FinnersTest/Pods/Alamofire/Source/SessionManager.swift
+FinnersTest/Pods/Alamofire/Source/TaskDelegate.swift
+FinnersTest/Pods/Alamofire/Source/Timeline.swift
+FinnersTest/Pods/Alamofire/Source/Validation.swift
+FinnersTest/Pods/GZIP/LICENCE.md
+FinnersTest/Pods/GZIP/README.md
+FinnersTest/Pods/GZIP/GZIP/GZIP.h
+FinnersTest/Pods/GZIP/GZIP/NSData+GZIP.h
+FinnersTest/Pods/GZIP/GZIP/NSData+GZIP.m
+FinnersTest/Pods/Kingfisher/LICENSE
+FinnersTest/Pods/Kingfisher/README.md
+FinnersTest/Pods/Kingfisher/Sources/AnimatedImageView.swift
+FinnersTest/Pods/Kingfisher/Sources/Box.swift
+FinnersTest/Pods/Kingfisher/Sources/CacheSerializer.swift
+FinnersTest/Pods/Kingfisher/Sources/Filter.swift
+FinnersTest/Pods/Kingfisher/Sources/FormatIndicatedCacheSerializer.swift
+FinnersTest/Pods/Kingfisher/Sources/Image.swift
+FinnersTest/Pods/Kingfisher/Sources/ImageCache.swift
+FinnersTest/Pods/Kingfisher/Sources/ImageDownloader.swift
+FinnersTest/Pods/Kingfisher/Sources/ImagePrefetcher.swift
+FinnersTest/Pods/Kingfisher/Sources/ImageProcessor.swift
+FinnersTest/Pods/Kingfisher/Sources/ImageTransition.swift
+FinnersTest/Pods/Kingfisher/Sources/ImageView+Kingfisher.swift
+FinnersTest/Pods/Kingfisher/Sources/Indicator.swift
+FinnersTest/Pods/Kingfisher/Sources/Kingfisher.h
+FinnersTest/Pods/Kingfisher/Sources/Kingfisher.swift
+FinnersTest/Pods/Kingfisher/Sources/KingfisherManager.swift
+FinnersTest/Pods/Kingfisher/Sources/KingfisherOptionsInfo.swift
+FinnersTest/Pods/Kingfisher/Sources/Placeholder.swift
+FinnersTest/Pods/Kingfisher/Sources/RequestModifier.swift
+FinnersTest/Pods/Kingfisher/Sources/Resource.swift
+FinnersTest/Pods/Kingfisher/Sources/String+MD5.swift
+FinnersTest/Pods/Kingfisher/Sources/ThreadHelper.swift
+FinnersTest/Pods/Kingfisher/Sources/UIButton+Kingfisher.swift
+FinnersTest/Pods/NVActivityIndicatorView/LICENSE
+FinnersTest/Pods/NVActivityIndicatorView/README.md
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorAnimationDelegate.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorShape.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationAudioEqualizer.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallBeat.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotate.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotateMultiple.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotatePulse.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallGridBeat.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallGridPulse.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulse.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulseRise.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulseSync.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallRotate.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallRotateChase.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScale.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleMultiple.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleRipple.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleRippleMultiple.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallSpinFadeLoader.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallTrianglePath.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallZigZag.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallZigZagDeflect.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBlank.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationCubeTransition.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScale.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScaleParty.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScalePulseOut.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScalePulseOutRapid.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineSpinFadeLoader.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationOrbit.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationPacman.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationSemiCircleSpin.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationSquareSpin.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationTriangleSkewSpin.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Presenter/NVActivityIndicatorPresenter.swift
+FinnersTest/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Presenter/NVActivityIndicatorViewable.swift
+FinnersTest/Pods/Pods.xcodeproj/project.pbxproj
+FinnersTest/Pods/SCLAlertView/LICENCE
+FinnersTest/Pods/SCLAlertView/README.md
+FinnersTest/Pods/SCLAlertView/SCLAlertView/SCLAlertView.swift
+FinnersTest/Pods/SCLAlertView/SCLAlertView/SCLExtensions.swift
+FinnersTest/Pods/SwiftyJSON/LICENSE
+FinnersTest/Pods/SwiftyJSON/README.md
+FinnersTest/Pods/SwiftyJSON/Source/SwiftyJSON.swift
+FinnersTest/Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+FinnersTest/Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+FinnersTest/Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+FinnersTest/Pods/Target Support Files/Alamofire/Alamofire.modulemap
+FinnersTest/Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+FinnersTest/Pods/Target Support Files/Alamofire/Info.plist
+FinnersTest/Pods/Target Support Files/GZIP/GZIP-dummy.m
+FinnersTest/Pods/Target Support Files/GZIP/GZIP-prefix.pch
+FinnersTest/Pods/Target Support Files/GZIP/GZIP-umbrella.h
+FinnersTest/Pods/Target Support Files/GZIP/GZIP.modulemap
+FinnersTest/Pods/Target Support Files/GZIP/GZIP.xcconfig
+FinnersTest/Pods/Target Support Files/GZIP/Info.plist
+FinnersTest/Pods/Target Support Files/Kingfisher/Info.plist
+FinnersTest/Pods/Target Support Files/Kingfisher/Kingfisher-dummy.m
+FinnersTest/Pods/Target Support Files/Kingfisher/Kingfisher-prefix.pch
+FinnersTest/Pods/Target Support Files/Kingfisher/Kingfisher-umbrella.h
+FinnersTest/Pods/Target Support Files/Kingfisher/Kingfisher.modulemap
+FinnersTest/Pods/Target Support Files/Kingfisher/Kingfisher.xcconfig
+FinnersTest/Pods/Target Support Files/NVActivityIndicatorView/Info.plist
+FinnersTest/Pods/Target Support Files/NVActivityIndicatorView/NVActivityIndicatorView-dummy.m
+FinnersTest/Pods/Target Support Files/NVActivityIndicatorView/NVActivityIndicatorView-prefix.pch
+FinnersTest/Pods/Target Support Files/NVActivityIndicatorView/NVActivityIndicatorView-umbrella.h
+FinnersTest/Pods/Target Support Files/NVActivityIndicatorView/NVActivityIndicatorView.modulemap
+FinnersTest/Pods/Target Support Files/NVActivityIndicatorView/NVActivityIndicatorView.xcconfig
+FinnersTest/Pods/Target Support Files/Pods-FinnersTest/Info.plist
+FinnersTest/Pods/Target Support Files/Pods-FinnersTest/Pods-FinnersTest-acknowledgements.markdown
+FinnersTest/Pods/Target Support Files/Pods-FinnersTest/Pods-FinnersTest-acknowledgements.plist
+FinnersTest/Pods/Target Support Files/Pods-FinnersTest/Pods-FinnersTest-dummy.m
+FinnersTest/Pods/Target Support Files/Pods-FinnersTest/Pods-FinnersTest-frameworks.sh
+FinnersTest/Pods/Target Support Files/Pods-FinnersTest/Pods-FinnersTest-resources.sh
+FinnersTest/Pods/Target Support Files/Pods-FinnersTest/Pods-FinnersTest-umbrella.h
+FinnersTest/Pods/Target Support Files/Pods-FinnersTest/Pods-FinnersTest.debug.xcconfig
+FinnersTest/Pods/Target Support Files/Pods-FinnersTest/Pods-FinnersTest.modulemap
+FinnersTest/Pods/Target Support Files/Pods-FinnersTest/Pods-FinnersTest.release.xcconfig
+FinnersTest/Pods/Target Support Files/SCLAlertView/Info.plist
+FinnersTest/Pods/Target Support Files/SCLAlertView/SCLAlertView-dummy.m
+FinnersTest/Pods/Target Support Files/SCLAlertView/SCLAlertView-prefix.pch
+FinnersTest/Pods/Target Support Files/SCLAlertView/SCLAlertView-umbrella.h
+FinnersTest/Pods/Target Support Files/SCLAlertView/SCLAlertView.modulemap
+FinnersTest/Pods/Target Support Files/SCLAlertView/SCLAlertView.xcconfig
+FinnersTest/Pods/Target Support Files/SwiftyJSON/Info.plist
+FinnersTest/Pods/Target Support Files/SwiftyJSON/SwiftyJSON-dummy.m
+FinnersTest/Pods/Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch
+FinnersTest/Pods/Target Support Files/SwiftyJSON/SwiftyJSON-umbrella.h
+FinnersTest/Pods/Target Support Files/SwiftyJSON/SwiftyJSON.modulemap
+FinnersTest/Pods/Target Support Files/SwiftyJSON/SwiftyJSON.xcconfig

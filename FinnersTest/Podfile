@@ -1,0 +1,13 @@
+platform :ios, “10.0”
+use_frameworks!
+
+target 'FinnersTest' do
+  
+pod 'Alamofire', ‘4’
+pod 'SwiftyJSON'
+pod 'SCLAlertView', '~> 0.7'
+pod 'GzipSwift'
+pod 'Kingfisher', '~> 3.0'
+pod 'NVActivityIndicatorView', '~> 3.6'
+
+end

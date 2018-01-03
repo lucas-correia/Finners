@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PullRequest_TVC" customModule="FinnersTest" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="168"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-mx-Lb0">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-mx-Lb0">
                     <rect key="frame" x="14" y="14" width="347" height="30"/>
                     <color key="backgroundColor" red="0.78381964079999999" green="0.2889535158" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -67,6 +67,12 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imvOwnerAvatar" destination="BlL-ge-dv4" id="hBh-y6-0sX"/>
+                <outlet property="lblOwnerName" destination="ktv-DI-90Q" id="xi6-BZ-tMw"/>
+                <outlet property="lblPRBody" destination="Hs1-gO-dlW" id="DIZ-RV-Qte"/>
+                <outlet property="lblPRTitle" destination="5Hz-mx-Lb0" id="jWq-6F-TLU"/>
+            </connections>
             <point key="canvasLocation" x="33.5" y="277"/>
         </view>
     </objects>

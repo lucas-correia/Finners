@@ -373,7 +373,7 @@ final class LoadingView: UIView {
         //
         self.lblAccessory?.backgroundColor = UIColor.clear
         self.lblAccessory?.font = UIFont.init(name: App.Constants.FONT_MYRIAD_PRO_SEMIBOLD, size: App.Constants.FONT_SIZE_TEXT_FIELDS)
-        self.lblAccessory?.textColor = App.Style.colorView_Dark
+        self.lblAccessory?.textColor = App.Style.colorView_SuperDark
         //
         self.lblProgress?.backgroundColor = UIColor.clear
         self.lblProgress?.font = UIFont.init(name: App.Constants.FONT_MYRIAD_PRO_SEMIBOLD, size: App.Constants.FONT_SIZE_TEXT_FIELDS)
@@ -381,11 +381,11 @@ final class LoadingView: UIView {
         //
         self.lblNote?.backgroundColor = UIColor.clear
         self.lblNote?.font = UIFont.init(name: App.Constants.FONT_MYRIAD_PRO_REGULAR, size: App.Constants.FONT_SIZE_LABEL_MINI)
-        self.lblNote?.textColor = App.Style.colorView_Dark
+        self.lblNote?.textColor = App.Style.colorView_SuperDark
         self.lblNote?.alpha = 0.0
         //
         self.viewProgress.backgroundColor = UIColor.clear
-        self.viewProgress.trackTintColor = App.Style.colorView_Light
+        self.viewProgress.trackTintColor = App.Style.colorText_Blue
         self.viewProgress.progressTintColor = UIColor.blue
         self.viewProgress?.alpha = 0.0
         //
@@ -402,14 +402,14 @@ final class LoadingView: UIView {
         self.btnCancel?.backgroundColor = UIColor.clear
         self.btnCancel?.setBackgroundImage(ToolBox.graphicHelper_CreateFlatImage(size: (btnCancel?.frame.size)!, corners: UIRectCorner.allCorners, cornerRadius: CGSize.init(width: 6.0, height: 6.0), color: UIColor.white), for: UIControlState.normal)
         self.btnCancel?.setBackgroundImage(ToolBox.graphicHelper_CreateFlatImage(size: (btnCancel?.frame.size)!, corners: UIRectCorner.allCorners, cornerRadius: CGSize.init(width: 6.0, height: 6.0), color: UIColor.lightGray), for: UIControlState.highlighted)
-        self.btnCancel?.setTitleColor(App.Style.colorText_RedDark, for: UIControlState.normal)
+        self.btnCancel?.setTitleColor(App.Style.colorText_Yellow, for: UIControlState.normal)
         self.btnCancel?.titleLabel?.font = UIFont.init(name: App.Constants.FONT_MYRIAD_PRO_REGULAR, size: App.Constants.FONT_SIZE_BUTTON_TITLE)
         ToolBox.graphicHelper_ApplyShadow(view: self.btnCancel!, color: UIColor.black, offSet: CGSize.init(width: 2.0, height: 2.0), radius: 2.0, opacity: 0.5)
         //
         self.tag = 666
         //
         self.indicatorView.type = .ballSpinFadeLoader
-        self.indicatorView.color = App.Style.colorView_RedDefault
+        self.indicatorView.color = App.Style.colorText_Yellow
         //
         App.Delegate.window?.addSubview(self)
         self.alpha = 0.0

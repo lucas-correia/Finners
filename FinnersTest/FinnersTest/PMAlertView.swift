@@ -174,64 +174,64 @@ public class PMAlertView: UIView, UITextFieldDelegate {
     
     @discardableResult public func addOption(_ optType:PMAlertViewOptionType, _ optTitle:String, _ optIcon:PMAlertViewIconType, _ optIdentifier:String?, _ optAction:CompletionHandler?) -> Bool {
         
-        if (options.count > 2) {
-            return false
-        }else {
-            
-            let newOption:AlertOption = AlertOption.init(optType, optTitle, optIdentifier ?? "", optAction)
-            
-            let y:CGFloat = CGFloat(options.count + 1) * 14.0 +  CGFloat(options.count) * 50.0
-            //
-            let button:UIButton = UIButton.init(type: .custom)
-            button.frame = CGRect.init(x: 14.0, y: y, width: viewContainer.frame.size.width, height: 50.0)
-            button.backgroundColor = UIColor.clear
-            button.layer.borderWidth = 1.0
-            button.setTitle(optTitle, for: .normal)
-            button.isExclusiveTouch = true
-            button.semanticContentAttribute = .forceLeftToRight
-            button.tag = options.count
-            
-            switch optType {
-            case .normal:
-                
-                button.setBackgroundImage(ToolBox.graphicHelper_CreateFlatImage(size: button.frame.size, corners: .allCorners, cornerRadius: CGSize.zero, color: App.Style.colorView_RedDefault), for: .normal)
-                button.setBackgroundImage(ToolBox.graphicHelper_CreateFlatImage(size: button.frame.size, corners: .allCorners, cornerRadius: CGSize.zero, color: App.Style.colorView_RedDark), for: .highlighted)
-                button.layer.borderColor = App.Style.colorView_RedDark.cgColor
-                button.setTitleColor(App.Style.colorText_White, for: .normal)
-                if (optIcon != .none) {
-                    let icon1:UIImage? = self.buttonIconImage(type: optIcon, optIdentifier:optIdentifier, color: App.Style.colorText_White)
-                    button.setImage(icon1, for: .normal)
-                }
-                button.titleLabel?.font = UIFont.init(name: App.Constants.FONT_SAN_FRANCISCO_BOLD, size: App.Constants.FONT_SIZE_BUTTON_TITLE)
-                
-            case .extra:
-                
-                button.setBackgroundImage(ToolBox.graphicHelper_CreateFlatImage(size: button.frame.size, corners: .allCorners, cornerRadius: CGSize.zero, color: App.Style.colorView_Dark), for: .normal)
-                button.setBackgroundImage(ToolBox.graphicHelper_CreateFlatImage(size: button.frame.size, corners: .allCorners, cornerRadius: CGSize.zero, color: App.Style.colorView_Dark), for: .highlighted)
-                button.layer.borderColor = App.Style.colorView_Dark.cgColor
-                button.setTitleColor(App.Style.colorText_White, for: .normal)
-                if (optIcon != .none) {
-                    let icon1:UIImage? = self.buttonIconImage(type: optIcon, optIdentifier:optIdentifier, color: App.Style.colorText_White)
-                    button.setImage(icon1, for: .normal)
-                }
-                button.titleLabel?.font = UIFont.init(name: App.Constants.FONT_SAN_FRANCISCO_BOLD, size: App.Constants.FONT_SIZE_BUTTON_TITLE)
-                
-            case .cancel:
-                
-                button.layer.borderWidth = 0.0
-                button.setTitleColor(App.Style.colorText_White, for: .normal)
-                button.titleLabel?.font = UIFont.init(name: App.Constants.FONT_SAN_FRANCISCO_BOLD, size: App.Constants.FONT_SIZE_BUTTON_TITLE)
-            }
-            //
-            button.addTarget(self, action: #selector(actionButton(_ :)), for: .touchUpInside)
-            self.viewBackground.addSubview(button)
-            //
-            newOption.button = button
-            //
-            options.append(newOption)
-            
+//        if (options.count > 2) {
+//            return false
+//        }else {
+//
+//            let newOption:AlertOption = AlertOption.init(optType, optTitle, optIdentifier ?? "", optAction)
+//
+//            let y:CGFloat = CGFloat(options.count + 1) * 14.0 +  CGFloat(options.count) * 50.0
+//            //
+//            let button:UIButton = UIButton.init(type: .custom)
+//            button.frame = CGRect.init(x: 14.0, y: y, width: viewContainer.frame.size.width, height: 50.0)
+//            button.backgroundColor = UIColor.clear
+//            button.layer.borderWidth = 1.0
+//            button.setTitle(optTitle, for: .normal)
+//            button.isExclusiveTouch = true
+//            button.semanticContentAttribute = .forceLeftToRight
+//            button.tag = options.count
+//
+//            switch optType {
+//            case .normal:
+//
+//                button.setBackgroundImage(ToolBox.graphicHelper_CreateFlatImage(size: button.frame.size, corners: .allCorners, cornerRadius: CGSize.zero, color: App.Style.colorView_RedDefault), for: .normal)
+//                button.setBackgroundImage(ToolBox.graphicHelper_CreateFlatImage(size: button.frame.size, corners: .allCorners, cornerRadius: CGSize.zero, color: App.Style.colorView_RedDark), for: .highlighted)
+//                //button.layer.borderColor = App.Style.colorView_RedDark.cgColor
+//               // button.setTitleColor(App.Style.colorText_White, for: .normal)
+//                if (optIcon != .none) {
+//                    //let icon1:UIImage? = self.buttonIconImage(type: optIcon, optIdentifier:optIdentifier, color: App.Style.colorText_White)
+//                    button.setImage(icon1, for: .normal)
+//                }
+//                button.titleLabel?.font = UIFont.init(name: App.Constants.FONT_SAN_FRANCISCO_BOLD, size: App.Constants.FONT_SIZE_BUTTON_TITLE)
+//
+//            case .extra:
+//
+//                button.setBackgroundImage(ToolBox.graphicHelper_CreateFlatImage(size: button.frame.size, corners: .allCorners, cornerRadius: CGSize.zero, color: App.Style.colorView_Dark), for: .normal)
+//                button.setBackgroundImage(ToolBox.graphicHelper_CreateFlatImage(size: button.frame.size, corners: .allCorners, cornerRadius: CGSize.zero, color: App.Style.colorView_Dark), for: .highlighted)
+//                button.layer.borderColor = App.Style.colorView_Dark.cgColor
+//                button.setTitleColor(App.Style.colorText_White, for: .normal)
+//                if (optIcon != .none) {
+//                    let icon1:UIImage? = self.buttonIconImage(type: optIcon, optIdentifier:optIdentifier, color: App.Style.colorText_White)
+//                    button.setImage(icon1, for: .normal)
+//                }
+//                button.titleLabel?.font = UIFont.init(name: App.Constants.FONT_SAN_FRANCISCO_BOLD, size: App.Constants.FONT_SIZE_BUTTON_TITLE)
+//
+//            case .cancel:
+//
+//                button.layer.borderWidth = 0.0
+//                button.setTitleColor(App.Style.colorText_White, for: .normal)
+//                button.titleLabel?.font = UIFont.init(name: App.Constants.FONT_SAN_FRANCISCO_BOLD, size: App.Constants.FONT_SIZE_BUTTON_TITLE)
+//            }
+//            //
+//            button.addTarget(self, action: #selector(actionButton(_ :)), for: .touchUpInside)
+//            self.viewBackground.addSubview(button)
+//            //
+//            newOption.button = button
+//            //
+//            options.append(newOption)
+        
             return true
-        }
+        //}
     }
     
     public func setupInputField(visible:Bool, placeholder:String, inputMask:String?, maxLenght:Int, keyboardType:UIKeyboardType, secure:Bool) {
@@ -269,7 +269,7 @@ public class PMAlertView: UIView, UITextFieldDelegate {
                 NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: .UIKeyboardWillHide, object: nil)
                 
                 //Icon
-                self.imvIcon.image = self.alertIconImage(type: type, color: App.Style.colorText_GrayDark)
+                //self.imvIcon.image = self.alertIconImage(type: type, color: App.Style.colorText_GrayDark)
                 
                 //Input
                 self.txtInput.text = ""
@@ -281,7 +281,7 @@ public class PMAlertView: UIView, UITextFieldDelegate {
                 text.addAttributes([NSFontAttributeName : font as Any], range: NSRange.init(location: 0, length: message.characters.count))
                 self.txtMessage.attributedText = text
                 self.txtMessage.textAlignment = .center
-                self.txtMessage.textColor = App.Style.colorText_GrayDark
+                //self.txtMessage.textColor = App.Style.colorText_GrayDark
                
                 let maxHeight:CGFloat = self.frame.size.height * 0.90
                 
@@ -436,14 +436,14 @@ public class PMAlertView: UIView, UITextFieldDelegate {
         //
         self.viewContainer.backgroundColor = UIColor.white
         self.viewContainer.layer.borderWidth = 1.0
-        self.viewContainer.layer.borderColor = App.Style.colorView_Light.cgColor
+        //self.viewContainer.layer.borderColor = App.Style.colorView_Light.cgColor
         //
         self.imvIcon.backgroundColor = UIColor.clear
         //
         self.txtMessage.backgroundColor = UIColor.clear
         self.txtMessage.text = ""
         //
-        App.Style.updateLayout(textField: &txtInput)
+        
         self.txtInput.text = ""
         self.txtInput.alpha = 0.0
         //
@@ -551,7 +551,7 @@ public class PMAlertView: UIView, UITextFieldDelegate {
         text.addAttributes([NSFontAttributeName : font as Any], range: NSRange.init(location: 0, length: txtMessage.text.characters.count))
         self.txtMessage.attributedText = text
         self.txtMessage.textAlignment = .center
-        self.txtMessage.textColor = App.Style.colorText_GrayDark
+        //self.txtMessage.textColor = App.Style.colorText_GrayDark
         
         let maxHeight:CGFloat = self.frame.size.height * 0.90
         

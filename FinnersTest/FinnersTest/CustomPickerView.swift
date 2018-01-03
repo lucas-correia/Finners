@@ -92,7 +92,6 @@ final class CustomPickerView: UIView, UIPickerViewDelegate, UIPickerViewDataSour
             let label:UILabel = UILabel.init(frame: CGRect.init(x: 0.0, y: 0.0, width: pickerView.frame.size.width, height: 44.0))
             label.backgroundColor = UIColor.clear
             label.font = UIFont.init(name: App.Constants.FONT_SAN_FRANCISCO_MEDIUM, size: App.Constants.FONT_SIZE_LABEL_BIG)
-            label.textColor = App.Style.colorText_GrayDark
             label.textAlignment = .center
             //
             label.text = arrayOfItems?[row].title
@@ -222,13 +221,13 @@ final class CustomPickerView: UIView, UIPickerViewDelegate, UIPickerViewDataSour
         //
         btnConfirm.contentHorizontalAlignment = .right;
         btnConfirm.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 14)
-        btnConfirm.setTitleColor(App.Style.colorText_BlueDefault, for: .normal)
+        //btnConfirm.setTitleColor(App.Style.colorText_BlueDefault, for: .normal)
         btnConfirm.titleLabel?.font = UIFont.init(name: App.Constants.FONT_SAN_FRANCISCO_MEDIUM, size: App.Constants.FONT_SIZE_BUTTON_TITLE)
         btnConfirm.setTitle(App.STR("BUTTON_TITLE_CUSTOMPICKERVIEW_SELECT"), for: .normal)
         //
         btnClear.contentHorizontalAlignment = .left;
         btnClear.titleEdgeInsets = UIEdgeInsetsMake(0, 14, 0, 0)
-        btnClear.setTitleColor(App.Style.colorText_BlueDefault, for: .normal)
+        //btnClear.setTitleColor(App.Style.colorText_BlueDefault, for: .normal)
         btnClear.titleLabel?.font = UIFont.init(name: App.Constants.FONT_SAN_FRANCISCO_MEDIUM, size: App.Constants.FONT_SIZE_BUTTON_TITLE)
         btnClear.setTitle(App.STR("BUTTON_TITLE_CUSTOMPICKERVIEW_CLOSE"), for: .normal)
         //

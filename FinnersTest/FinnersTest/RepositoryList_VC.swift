@@ -27,7 +27,7 @@ class RepositoryList_VC: UIViewController, UITableViewDataSource, UITableViewDel
     @IBOutlet weak var tbvRepositories:UITableView!
     
     //MARK: - • PRIVATE PROPERTIES
-    private var repoArray:Array<Repository>!
+    private var repoArray:Array<Repository> = Array<Repository>.init()
     private var selectedRepo:Repository!
     private let refreshControl = UIRefreshControl()
     private var lastItemsLoaded = false
@@ -98,7 +98,7 @@ class RepositoryList_VC: UIViewController, UITableViewDataSource, UITableViewDel
             
             if(page == 1){
                 
-                self.repoArray = repoArray
+                self.repoArray = repoArray!
                 
             } else {
                 

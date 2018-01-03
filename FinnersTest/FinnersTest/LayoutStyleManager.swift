@@ -22,64 +22,25 @@ class LayoutStyleManager:AnyObject{
     var style:AppStyle
     
     //Componentes gerais (bordas, fundos, etc)
-    var colorView_SuperLight:UIColor
-    var colorView_Light:UIColor
-    var colorView_Normal:UIColor
-    var colorView_Dark:UIColor
+    var colorView_Yellow:UIColor
     var colorView_SuperDark:UIColor
-    //
-    var colorView_RedDefault:UIColor
-    var colorView_RedDark:UIColor
-    //
-    var colorView_GreenDefault:UIColor
-    var colorView_GreenDark:UIColor
     
     //Textos
-    var colorText_White:UIColor
-    //
-    var colorText_GrayDefault:UIColor
-    var colorText_GrayDark:UIColor
-    //
-    var colorText_RedDefault:UIColor
-    var colorText_RedDark:UIColor
-    //
-    var colorText_GreenDefault:UIColor
-    var colorText_GreenDark:UIColor
-    //
-    var colorText_BlueDefault:UIColor
-    var colorText_BlueDark:UIColor
-    
+    var colorText_Yellow:UIColor
+    var colorText_Blue:UIColor
+    var colorText_Black:UIColor
     
     //Initializers:
     init(){
         self.style = .Default
         //
-        colorView_SuperLight = UIColor.white
-        colorView_Light = UIColor.init(red: 245.0/255.0, green: 245.0/255.0, blue: 245.0/255.0, alpha: 1.0)
-        colorView_Normal = UIColor.init(red: 230.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 1.0)
-        colorView_Dark = UIColor.init(red: 109.0/255.0, green: 109.0/255.0, blue: 109.0/255.0, alpha: 1.0)
-        colorView_SuperDark = UIColor.init(red: 62.0/255.0, green: 62.0/255.0, blue: 62.0/255.0, alpha: 1.0)
-        //
-        colorView_RedDefault = UIColor.init(red: 220.0/255.0, green: 40.0/255.0, blue: 47.0/255.0, alpha: 1.0)
-        colorView_RedDark = UIColor.init(red: 188.0/255.0, green: 7.0/255.0, blue: 13.0/255.0, alpha: 1.0)
-        //
-        colorView_GreenDefault = UIColor.init(red: 117.0/255.0, green: 180.0/255.0, blue: 49.0/255.0, alpha: 1.0)
-        colorView_GreenDark = UIColor.init(red: 79.0/255.0, green: 136.0/255.0, blue: 17.0/255.0, alpha: 1.0)
+        colorView_Yellow = UIColor.init(red: 217.0/255.0, green: 135.0/255.0, blue: 6.0/255.0, alpha: 1.0)
+        colorView_SuperDark = UIColor.init(red: 46.0/255.0, green: 46.0/255.0, blue: 46.0/255.0, alpha: 1.0)
         
         //Textos
-        colorText_White = UIColor.white
-        //
-        colorText_GrayDefault = UIColor.init(red: 109.0/255.0, green: 109.0/255.0, blue: 109.0/255.0, alpha: 1.0)
-        colorText_GrayDark = UIColor.init(red: 62.0/255.0, green: 62.0/255.0, blue: 62.0/255.0, alpha: 1.0)
-        //
-        colorText_RedDefault = UIColor.init(red: 220.0/255.0, green: 40.0/255.0, blue: 47.0/255.0, alpha: 1.0)
-        colorText_RedDark = UIColor.init(red: 188.0/255.0, green: 7.0/255.0, blue: 13.0/255.0, alpha: 1.0)
-        //
-        colorText_GreenDefault = UIColor.init(red: 117.0/255.0, green: 180.0/255.0, blue: 49.0/255.0, alpha: 1.0)
-        colorText_GreenDark = UIColor.init(red: 79.0/255.0, green: 136.0/255.0, blue: 17.0/255.0, alpha: 1.0)
-        //
-        colorText_BlueDefault = UIColor.init(red: 0.0/255.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-        colorText_BlueDark = UIColor.init(red: 7.0/255.0, green: 56.0/255.0, blue: 109.0/255.0, alpha: 1.0)
+        colorText_Black = UIColor.black
+        colorText_Yellow = UIColor.init(red: 217.0/255.0, green: 135.0/255.0, blue: 6.0/255.0, alpha: 1.0)
+        colorText_Blue = UIColor.init(red: 119.0/255.0, green: 163.0/255.0, blue: 196.0/255.0, alpha: 1.0)
     }
     
     func setStyle(_ style:AppStyle){
@@ -89,32 +50,7 @@ class LayoutStyleManager:AnyObject{
         case .Default, .Light, .Dark, .Special:
             self.style = .Default
             //
-            colorView_SuperLight = UIColor.white
-            colorView_Light = UIColor.init(red: 245.0/255.0, green: 245.0/255.0, blue: 245.0/255.0, alpha: 1.0)
-            colorView_Normal = UIColor.init(red: 230.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 1.0)
-            colorView_Dark = UIColor.init(red: 109.0/255.0, green: 109.0/255.0, blue: 109.0/255.0, alpha: 1.0)
-            colorView_SuperDark = UIColor.init(red: 62.0/255.0, green: 62.0/255.0, blue: 62.0/255.0, alpha: 1.0)
-            //
-            colorView_RedDefault = UIColor.init(red: 220.0/255.0, green: 40.0/255.0, blue: 47.0/255.0, alpha: 1.0)
-            colorView_RedDark = UIColor.init(red: 188.0/255.0, green: 7.0/255.0, blue: 13.0/255.0, alpha: 1.0)
-            //
-            colorView_GreenDefault = UIColor.init(red: 117.0/255.0, green: 180.0/255.0, blue: 49.0/255.0, alpha: 1.0)
-            colorView_GreenDark = UIColor.init(red: 79.0/255.0, green: 136.0/255.0, blue: 17.0/255.0, alpha: 1.0)
             
-            //Textos
-            colorText_White = UIColor.white
-            //
-            colorText_GrayDefault = UIColor.init(red: 109.0/255.0, green: 109.0/255.0, blue: 109.0/255.0, alpha: 1.0)
-            colorText_GrayDark = UIColor.init(red: 62.0/255.0, green: 62.0/255.0, blue: 62.0/255.0, alpha: 1.0)
-            //
-            colorText_RedDefault = UIColor.init(red: 220.0/255.0, green: 40.0/255.0, blue: 47.0/255.0, alpha: 1.0)
-            colorText_RedDark = UIColor.init(red: 188.0/255.0, green: 7.0/255.0, blue: 13.0/255.0, alpha: 1.0)
-            //
-            colorText_GreenDefault = UIColor.init(red: 117.0/255.0, green: 180.0/255.0, blue: 49.0/255.0, alpha: 1.0)
-            colorText_GreenDark = UIColor.init(red: 79.0/255.0, green: 136.0/255.0, blue: 17.0/255.0, alpha: 1.0)
-            //
-            colorText_BlueDefault = UIColor.init(red: 0.0/255.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-            colorText_BlueDark = UIColor.init(red: 7.0/255.0, green: 56.0/255.0, blue: 109.0/255.0, alpha: 1.0)
             
             //        case .Light:
             //            break
@@ -127,45 +63,7 @@ class LayoutStyleManager:AnyObject{
             
         }
     }
-    
-    func updateLayout(textField: inout ASTextField!){
-        
-        textField.canShowBorder = true
-        textField.asLayer.borderColor = colorView_Normal.cgColor
-        textField.asLayer.borderWidth = 1.0
-        textField.asLayer.cornerRadius = 0.0
-        //Padding
-        textField.paddingYFloatLabel = 8.0
-        textField.extraPaddingForBottomConstrait = 2.0
-        //Colors
-        textField.textColor = colorText_GrayDark
-        textField.errorColorView = colorText_RedDefault
-        textField.normalColorView = colorView_Normal
-        //Placeholder
-        textField.floatPlaceholderFont = UIFont.init(name: App.Constants.FONT_SAN_FRANCISCO_REGULAR, size: App.Constants.FONT_SIZE_LABEL_MINI)!
-        textField.placeholderColor = UIColor.gray
-        textField.floatPlaceholderColor = UIColor.gray
-        //Font
-        textField.font = UIFont.init(name: App.Constants.FONT_SAN_FRANCISCO_REGULAR, size: App.Constants.FONT_SIZE_TEXT_FIELDS)
-        //Ajustando o tamanho dos textos:
-        textField.minimumFontSize = App.Constants.FONT_SIZE_TEXT_FIELDS / 2.0
-        textField.adjustsFontSizeToFitWidth = true
-        //Ajustando o tamanho para o placeholder:
-        for  subView in textField.subviews {
-            if let label = subView as? UILabel {
-                
-                label.adjustsFontSizeToFitWidth = true
-                if (label.tag == 101) {
-                    //floating placeholder
-                    label.minimumScaleFactor = 0.5
-                }else{
-                    //normal placeholder
-                    label.minimumScaleFactor = 0.5
-                }
-            }
-        }
-    }
-    
+
     func createActivityIndicatorImageView(color:UIColor, position:ActivityIndicatorImageView.IndicatorPosition, parentImageView:UIImageView) -> ActivityIndicatorImageView{
         
         let aiiv:ActivityIndicatorImageView = ActivityIndicatorImageView.init(activityIndicatorStyle: .whiteLarge)
@@ -185,7 +83,7 @@ class LayoutStyleManager:AnyObject{
         btnApply.contentHorizontalAlignment = .right
         btnApply.addTarget(targetView, action: selector, for: .touchUpInside)
         btnApply.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 14)
-        btnApply.setTitleColor(self.colorText_BlueDefault, for: .normal)
+        btnApply.setTitleColor(self.colorText_Blue, for: .normal)
         btnApply.titleLabel?.font = UIFont.init(name: App.Constants.FONT_SAN_FRANCISCO_MEDIUM, size: App.Constants.FONT_SIZE_BUTTON_TITLE)
         btnApply.setTitle(App.STR("BUTTON_TITLE_ACCESSORY_VIEW_DONE"), for: .normal)
         //

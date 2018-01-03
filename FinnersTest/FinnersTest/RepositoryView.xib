@@ -13,7 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Repository_TVC" customModule="FinnersTest" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -125,6 +125,18 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imvOwnerAvatar" destination="1WB-fa-yWZ" id="jne-i7-aWR"/>
+                <outlet property="imvRepoFork" destination="v3g-rZ-SOg" id="dQY-Qz-cvv"/>
+                <outlet property="imvRepoStar" destination="OMc-3h-USa" id="wx3-Y4-Oz7"/>
+                <outlet property="lblOwnerName" destination="42F-WO-JVj" id="N5t-iR-T0d"/>
+                <outlet property="lblRepoDescription" destination="KRY-aQ-PBK" id="m28-Qv-4Kf"/>
+                <outlet property="lblRepoForks" destination="WLk-EC-Sqy" id="Szd-R5-QIZ"/>
+                <outlet property="lblRepoName" destination="ZHp-Xe-Tbb" id="eas-ar-YUl"/>
+                <outlet property="lblRepoStars" destination="MfV-Ns-bPY" id="0DI-oN-1qh"/>
+                <outlet property="viewOwnerInfo" destination="FBB-cy-JFF" id="VgJ-Tb-Uji"/>
+                <outlet property="viewRepoInfo" destination="L7U-bw-VwS" id="mzB-EI-MgP"/>
+            </connections>
             <point key="canvasLocation" x="33.5" y="301.5"/>
         </view>
     </objects>

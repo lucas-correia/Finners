@@ -39,6 +39,7 @@ class PullRequest_VC: UIViewController, UITableViewDataSource, UITableViewDelega
     private var oppened = 0
     private var closed = 0
     private var lastPageLoaded = 0
+    private let refreshControl = UIRefreshControl()
     
     //MARK: - • INITIALISERS
     
@@ -63,6 +64,15 @@ class PullRequest_VC: UIViewController, UITableViewDataSource, UITableViewDelega
         prDS.delegate = self
         tbvPullRequests.register(UINib.init(nibName: "PullRequestView", bundle: nil), forCellReuseIdentifier: "CustomCellPullRequest")
         self.navigationItem.title = "Pull Resquests"
+        
+        //adding pull to refresh (checking system version)
+        refreshControl.addTarget(self, action: #selector(self.pullToRefresh), for: .valueChanged)
+        if #available(iOS 10.0, *) {
+            tbvPullRequests.refreshControl = refreshControl
+        } else {
+            tbvPullRequests.addSubview(refreshControl)
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -127,11 +137,21 @@ class PullRequest_VC: UIViewController, UITableViewDataSource, UITableViewDelega
         App.Delegate.activityView?.stopActivity(nil)
         
         if(repoArray != nil) {
-        
-            for pr in repoArray! {
-                self.prArray.append(pr)
-            }
+            
             lastPageLoaded = page
+            
+            if(lastPageLoaded == 1){
+                
+                self.prArray = repoArray!
+                self.closed = 0
+                self.oppened = 0
+                
+            } else {
+                
+                for pr in repoArray! {
+                    self.prArray.append(pr)
+                }
+            }
             
             if((repoArray?.count)! < App.Constants.ITEMS_PER_PAGE) {
                 
@@ -150,10 +170,15 @@ class PullRequest_VC: UIViewController, UITableViewDataSource, UITableViewDelega
                 }
             }
             
+            if #available(iOS 10.0, *) {
+                tbvPullRequests.refreshControl?.endRefreshing()
+            } else {
+                refreshControl.endRefreshing()
+                // Fallback on earlier versions
+            }
             lblOpen.text = String.init(format: "opened %i", self.oppened)
             lblClosed.text = String.init(format: " / %i closed", self.closed)
             tbvPullRequests.reloadData()
-            
         }
     }
 
@@ -161,7 +186,9 @@ class PullRequest_VC: UIViewController, UITableViewDataSource, UITableViewDelega
 
 
 //MARK: - • ACTION METHODS
-
+    func pullToRefresh() {
+        prDS.getPullRequestList(page: 1, url: (selectedRepository?.pulls_url)!)
+    }
 
 //MARK: - • PRIVATE METHODS (INTERNAL USE ONLY)
     

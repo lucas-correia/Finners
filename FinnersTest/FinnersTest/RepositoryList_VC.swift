@@ -71,6 +71,7 @@ class RepositoryList_VC: UIViewController, UITableViewDataSource, UITableViewDel
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationItem.title = "Repositories"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName : UIFont.init(name: App.Constants.FONT_SAN_FRANCISCO_BOLD, size: App.Constants.FONT_SIZE_LABEL_NORMAL) ?? UIFont.systemFont(ofSize: App.Constants.FONT_SIZE_LABEL_NORMAL)]
         
     }
     
@@ -121,6 +122,7 @@ class RepositoryList_VC: UIViewController, UITableViewDataSource, UITableViewDel
             if #available(iOS 10.0, *) {
                 tbvRepositories.refreshControl?.endRefreshing()
             } else {
+                refreshControl.endRefreshing()
                 // Fallback on earlier versions
             }
             tbvRepositories.reloadData()
@@ -160,6 +162,7 @@ class RepositoryList_VC: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         selectedRepo = repoArray[indexPath.row].copy()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: " ", style: .plain, target: nil, action: nil)
         self.performSegue(withIdentifier: "Segue_PR", sender: nil)
         
     }

@@ -113,8 +113,13 @@ class PullRequest_VC: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let pr = prArray[indexPath.row]
         
+        guard let url = URL(string: pr.url!) else {
+            return
+        }
         
+        UIApplication.shared.openURL(url)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

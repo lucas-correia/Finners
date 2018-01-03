@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D0991AE1FFCD61A000BC861 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0991AD1FFCD61A000BC861 /* PullRequest.swift */; };
-		3D0991B01FFCDEB8000BC861 /* PullRequest_VCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0991AF1FFCDEB8000BC861 /* PullRequest_VCViewController.swift */; };
+		3D0991B01FFCDEB8000BC861 /* PullRequest_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0991AF1FFCDEB8000BC861 /* PullRequest_VC.swift */; };
 		3D0991B21FFCF0F6000BC861 /* PullRequest_DS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0991B11FFCF0F6000BC861 /* PullRequest_DS.swift */; };
 		3DF68E381FFC386A00ACAD16 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF68E371FFC386A00ACAD16 /* Repository.swift */; };
 		3DF68E3A1FFC490400ACAD16 /* RepositoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DF68E391FFC490400ACAD16 /* RepositoryView.xib */; };
@@ -29,7 +29,6 @@
 		E74E5A021F28D65800F2F6FA /* tabbar-icon-4@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E74E59F81F28D65800F2F6FA /* tabbar-icon-4@3x.png */; };
 		E74E5A031F28D65800F2F6FA /* tabbar-icon-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E74E59F91F28D65800F2F6FA /* tabbar-icon-5@2x.png */; };
 		E74E5A041F28D65800F2F6FA /* tabbar-icon-5@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E74E59FA1F28D65800F2F6FA /* tabbar-icon-5@3x.png */; };
-		E76CEF381F0A570900BCA6CF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76CEF371F0A570900BCA6CF /* User.swift */; };
 		E76CEF3A1F0A589500BCA6CF /* beep.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E76CEF391F0A589500BCA6CF /* beep.m4a */; };
 		E7A00FAA1E8E81FF0050EDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A00FA91E8E81FF0050EDD3 /* AppDelegate.swift */; };
 		E7A00FAF1E8E81FF0050EDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A00FAD1E8E81FF0050EDD3 /* Main.storyboard */; };
@@ -145,7 +144,7 @@
 /* Begin PBXFileReference section */
 		204D22F5AD0F16A4E8D38B1C /* Pods-FinnersTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinnersTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinnersTest/Pods-FinnersTest.debug.xcconfig"; sourceTree = "<group>"; };
 		3D0991AD1FFCD61A000BC861 /* PullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
-		3D0991AF1FFCDEB8000BC861 /* PullRequest_VCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest_VCViewController.swift; sourceTree = "<group>"; };
+		3D0991AF1FFCDEB8000BC861 /* PullRequest_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest_VC.swift; sourceTree = "<group>"; };
 		3D0991B11FFCF0F6000BC861 /* PullRequest_DS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest_DS.swift; sourceTree = "<group>"; };
 		3DF68E371FFC386A00ACAD16 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		3DF68E391FFC490400ACAD16 /* RepositoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryView.xib; sourceTree = "<group>"; };
@@ -167,7 +166,6 @@
 		E74E59F81F28D65800F2F6FA /* tabbar-icon-4@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-icon-4@3x.png"; sourceTree = "<group>"; };
 		E74E59F91F28D65800F2F6FA /* tabbar-icon-5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-icon-5@2x.png"; sourceTree = "<group>"; };
 		E74E59FA1F28D65800F2F6FA /* tabbar-icon-5@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-icon-5@3x.png"; sourceTree = "<group>"; };
-		E76CEF371F0A570900BCA6CF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E76CEF391F0A589500BCA6CF /* beep.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = beep.m4a; sourceTree = "<group>"; };
 		E7A00FA61E8E81FF0050EDD3 /* FinnersTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinnersTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A00FA91E8E81FF0050EDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -457,7 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				3DF68E411FFC5A5500ACAD16 /* RepositoryList_VC.swift */,
-				3D0991AF1FFCDEB8000BC861 /* PullRequest_VCViewController.swift */,
+				3D0991AF1FFCDEB8000BC861 /* PullRequest_VC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -494,7 +492,6 @@
 			isa = PBXGroup;
 			children = (
 				E7A00FF41E8E853B0050EDD3 /* Reference */,
-				E76CEF371F0A570900BCA6CF /* User.swift */,
 				3D0991AD1FFCD61A000BC861 /* PullRequest.swift */,
 				3DF68E371FFC386A00ACAD16 /* Repository.swift */,
 			);
@@ -1066,7 +1063,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DF68E451FFC674D00ACAD16 /* Repository_DS.swift in Sources */,
-				E76CEF381F0A570900BCA6CF /* User.swift in Sources */,
 				E7A00FEC1E8E84A30050EDD3 /* ConnectionManager.swift in Sources */,
 				E741BBE51EC9D43500DBC300 /* ObjectProtocol.swift in Sources */,
 				E7A00FF01E8E84D10050EDD3 /* SoundManager.swift in Sources */,
@@ -1079,7 +1075,7 @@
 				3D0991B21FFCF0F6000BC861 /* PullRequest_DS.swift in Sources */,
 				E7A00FF61E8E85490050EDD3 /* ModelViewController.swift in Sources */,
 				E7B035D61EC4995B00C669C9 /* LoadingView.swift in Sources */,
-				3D0991B01FFCDEB8000BC861 /* PullRequest_VCViewController.swift in Sources */,
+				3D0991B01FFCDEB8000BC861 /* PullRequest_VC.swift in Sources */,
 				E7B105401E92B718000A65D6 /* DataFileManager.swift in Sources */,
 				E7A00FAA1E8E81FF0050EDD3 /* AppDelegate.swift in Sources */,
 				3DF68E401FFC4FEC00ACAD16 /* PullRequest_TVC.swift in Sources */,

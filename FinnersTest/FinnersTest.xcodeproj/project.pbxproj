@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0991AE1FFCD61A000BC861 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0991AD1FFCD61A000BC861 /* PullRequest.swift */; };
 		3DF68E381FFC386A00ACAD16 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF68E371FFC386A00ACAD16 /* Repository.swift */; };
 		3DF68E3A1FFC490400ACAD16 /* RepositoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DF68E391FFC490400ACAD16 /* RepositoryView.xib */; };
 		3DF68E3C1FFC4E2200ACAD16 /* PullRequestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DF68E3B1FFC4E2200ACAD16 /* PullRequestView.xib */; };
@@ -141,6 +142,7 @@
 
 /* Begin PBXFileReference section */
 		204D22F5AD0F16A4E8D38B1C /* Pods-FinnersTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinnersTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinnersTest/Pods-FinnersTest.debug.xcconfig"; sourceTree = "<group>"; };
+		3D0991AD1FFCD61A000BC861 /* PullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
 		3DF68E371FFC386A00ACAD16 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		3DF68E391FFC490400ACAD16 /* RepositoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryView.xib; sourceTree = "<group>"; };
 		3DF68E3B1FFC4E2200ACAD16 /* PullRequestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PullRequestView.xib; sourceTree = "<group>"; };
@@ -487,6 +489,7 @@
 			children = (
 				E7A00FF41E8E853B0050EDD3 /* Reference */,
 				E76CEF371F0A570900BCA6CF /* User.swift */,
+				3D0991AD1FFCD61A000BC861 /* PullRequest.swift */,
 				3DF68E371FFC386A00ACAD16 /* Repository.swift */,
 			);
 			name = Models;
@@ -1074,6 +1077,7 @@
 				3DF68E401FFC4FEC00ACAD16 /* PullRequest_TVC.swift in Sources */,
 				E7C647281EE972370008A8F3 /* PMViewController.swift in Sources */,
 				E7C647291EE972370008A8F3 /* Exemplo_VC.swift in Sources */,
+				3D0991AE1FFCD61A000BC861 /* PullRequest.swift in Sources */,
 				3DF68E3E1FFC4FBD00ACAD16 /* Repository_TVC.swift in Sources */,
 				E7ED1C9B1E950AEA00D26C7B /* SCLAlertViewPlus.swift in Sources */,
 				E7A00FE81E8E84830050EDD3 /* ToolBox.swift in Sources */,

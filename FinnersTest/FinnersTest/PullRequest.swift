@@ -17,11 +17,11 @@ struct p {
     static let pullrequest_key = "pullRequest"
     
     static let pullrequest_id = "id"
-    static let pullrequest_title = "name"
-    static let pullrequest_body = "full_name"
-    static let pullrequest_status = "status"
+    static let pullrequest_title = "title"
+    static let pullrequest_body = "body"
+    static let pullrequest_status = "state"
     static let pullrequest_url = "html_url"
-    static let pullrequest_owner = "owner"
+    static let pullrequest_owner = "user"
 }
 
 //MARK: - USER CLASS
@@ -65,9 +65,9 @@ class PullRequest: ObjectProtocol {
                 //id:
                 if (keysList.contains(p.pullrequest_id)){newPR.id = dic[p.pullrequest_id] as? Int}
                 //title:
-                if (keysList.contains(p.pullrequest_title)){newPR.title = dic[p.pullrequest_title] as? Int}
+                if (keysList.contains(p.pullrequest_title)){newPR.title = dic[p.pullrequest_title] as? String}
                 //body:
-                if (keysList.contains(p.pullrequest_body)){newPR.body = dic[p.pullrequest_body] as? Int}
+                if (keysList.contains(p.pullrequest_body)){newPR.body = dic[p.pullrequest_body] as? String}
                 //status:
                 if (keysList.contains(p.pullrequest_status)){newPR.status = dic[p.pullrequest_status] as? String}
                 //url:
@@ -75,7 +75,7 @@ class PullRequest: ObjectProtocol {
                 //owner:
                 if (keysList.contains(p.pullrequest_owner)){newPR.owner = Owner.new(dic[p.pullrequest_owner] as!Dictionary<String, Any>?, nil)}
                 
-                return newRepo
+                return newPR
             }
             
         }else{

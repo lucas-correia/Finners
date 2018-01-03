@@ -62,12 +62,14 @@ class ConnectionManager
     
     //MARK: - • PUBLIC METHODS
     
-    func getRepositories(page:Int, handler:@escaping (_ response:Dictionary<String, Any>?, _ statusCode:Int, _ error:NSError?) -> ()){
+    func getRepositories(page:Int, handler:@escaping (_ response:Dictionary<String, Any>?, _ statusCode:Int?, _ error:NSError?) -> ()){
         
         //URL destino
         var urlRequest:String = App.Constants.SERVICE_URL_GET_REPOSITORIES
         urlRequest = urlRequest.replacingOccurrences(of: "<PAGE>", with: String.init(format: "%i", page))
         urlRequest = urlRequest.replacingOccurrences(of: "<PER_PAGE>", with: String.init(format: "%i", App.Constants.ITEMS_PER_PAGE))
+        
+        
         
         //Headers
         let header: HTTPHeaders = self.createDefaultHeader()
@@ -92,9 +94,48 @@ class ConnectionManager
                     
                 case .failure(let error):
                     
-                    handler(nil, (dResponse.response?.statusCode)!, error as NSError)
+                    handler(nil, dResponse.response?.statusCode, error as NSError)
                 }
         }        
+    }
+    
+    func getPullResquests(url:String, page:Int, handler:@escaping (_ response:Array<Dictionary<String, Any>>?, _ statusCode:Int, _ error:NSError?) -> ()){
+        
+        //URL destino
+        var urlRequest:String = url
+        
+        urlRequest = urlRequest.replacingOccurrences(of: "{/number}", with: "?state=all&page=<PAGE>&per_page=<PER_PAGE>")
+        urlRequest = urlRequest.replacingOccurrences(of: "<PAGE>", with: String.init(format: "%i", page))
+        urlRequest = urlRequest.replacingOccurrences(of: "<PER_PAGE>", with: String.init(format: "%i", App.Constants.ITEMS_PER_PAGE))
+        
+        print(urlRequest)
+        
+        //Headers
+        let header: HTTPHeaders = self.createDefaultHeader()
+        
+        //Request
+        Alamofire.request(urlRequest,
+                          method: HTTPMethod.get,
+                          parameters: nil,
+                          encoding: URLEncoding.default,
+                          headers: header
+            ).validate().responseJSON { (dResponse) in
+                
+                switch dResponse.result {
+                case .success:
+                    
+                    do{
+                        let resultDic:Array<Dictionary<String, Any>> = try (JSONSerialization.jsonObject(with: dResponse.data!, options: []) as! Array<Dictionary<String, Any>>)
+                        handler(resultDic, (dResponse.response!.statusCode), nil)
+                    }catch let error{
+                        handler(nil, (dResponse.response!.statusCode), NSError(domain:String.init(format: "JSONSerialization Error: %@", arguments:[error.localizedDescription]), code:dResponse.response!.statusCode, userInfo:nil))
+                    }
+                    
+                case .failure(let error):
+                    
+                    handler(nil, (dResponse.response?.statusCode)!, error as NSError)
+                }
+        }
     }
     
     //MARK: - • ACTION METHODS

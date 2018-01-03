@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="885.60000000000002" y="1033.1334332833585"/>
         </scene>
-        <!--View Controller-->
+        <!--Pull RequestVC-->
         <scene sceneID="J0E-FX-5HY">
             <objects>
-                <viewController id="dDR-82-lde" sceneMemberID="viewController">
+                <viewController id="dDR-82-lde" customClass="PullRequest_VC" customModule="FinnersTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2K4-4z-eGK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +60,10 @@
                                 <rect key="frame" x="0.0" y="114" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dDR-82-lde" id="QoU-nf-xjm"/>
+                                    <outlet property="delegate" destination="dDR-82-lde" id="zOa-I1-Z01"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZyU-SY-K7e">
                                 <rect key="frame" x="0.0" y="64" width="375" height="50"/>
@@ -104,6 +108,12 @@
                         <viewLayoutGuide key="safeArea" id="fp2-cO-SvF"/>
                     </view>
                     <navigationItem key="navigationItem" id="38m-sl-VBO"/>
+                    <connections>
+                        <outlet property="lblClosed" destination="J49-yH-MX4" id="xqm-BO-OEv"/>
+                        <outlet property="lblOpen" destination="BBe-ip-0ju" id="q3f-CW-WF5"/>
+                        <outlet property="tbvPullRequests" destination="T2L-Vr-2in" id="ggn-jh-r6r"/>
+                        <outlet property="viewHeader" destination="ZyU-SY-K7e" id="aLy-e7-bAj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ofc-Az-3m4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -66,6 +66,12 @@ class RepositoryList_VC: UIViewController, UITableViewDataSource, UITableViewDel
             tbvRepositories.addSubview(refreshControl)
         }
         
+        self.navigationController?.navigationBar.barTintColor = App.Style.colorView_SuperDark
+        self.navigationController?.navigationBar.backgroundColor = App.Style.colorView_SuperDark
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationItem.title = "Repositories"
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -82,10 +88,10 @@ class RepositoryList_VC: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "") {
-            
-            //TODO: alterar ao ter o view controller RP
-            let pullRequestVC = segue.destination as! PullRequest_TVC
+        if(segue.identifier == "Segue_PR") {
+    
+            let pullRequestVC = segue.destination as! PullRequest_VC
+            pullRequestVC.selectedRepository = selectedRepo
             
         }
     }

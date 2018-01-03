@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         NSLog("%@", ToolBox.applicationHelper_InstalationDataForSimulator())
         //
         activityView = LoadingView.new(owner: self)
-    
+        UIApplication.shared.statusBarStyle = .lightContent
         //self.registerNotifications()
         
         return true

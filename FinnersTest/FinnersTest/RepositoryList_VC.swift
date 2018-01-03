@@ -18,7 +18,7 @@ import Kingfisher
 
 //MARK: - • CLASS
 
-class RepositoryList_VC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class RepositoryList_VC: UIViewController, UITableViewDataSource, UITableViewDelegate, repositoryDSDelegate {
     
     //MARK: - • LOCAL DEFINES
     
@@ -31,6 +31,8 @@ class RepositoryList_VC: UIViewController, UITableViewDataSource, UITableViewDel
     private var selectedRepo:Repository!
     private let refreshControl = UIRefreshControl()
     private var lastItemsLoaded = false
+    private var repositoryDS = Repository_DS.init()
+    private var lastPageRequeted = 0
     
     //MARK: - • INITIALISERS
     
@@ -52,6 +54,8 @@ class RepositoryList_VC: UIViewController, UITableViewDataSource, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        repositoryDS.delegate = self
+        
         tbvRepositories.register(UINib.init(nibName: "RepositoryView", bundle: nil), forCellReuseIdentifier: "CustomCellRepository")
         
         //adding pull to refresh (checking system version)
@@ -72,6 +76,9 @@ class RepositoryList_VC: UIViewController, UITableViewDataSource, UITableViewDel
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        App.Delegate.activityView?.startActivity(.loading, true, nil, nil)
+        repositoryDS.getRepositories(page: 1)
+        lastPageRequeted = 1
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -84,6 +91,36 @@ class RepositoryList_VC: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     //MARK: - • INTERFACE/PROTOCOL METHODS
+    func didLoadRepositoryItems(repoDS: Repository_DS, repoArray: Array<Repository>?, reponse: Dictionary<String, Any>?, lastItemsLoaded: Bool?, page: Int) {
+        
+        App.Delegate.activityView?.stopActivity(nil)
+        if(repoArray != nil) {
+            
+            if(page == 1){
+                
+                self.repoArray = repoArray
+                
+            } else {
+                
+                for repository in repoArray! {
+
+                    self.repoArray.append(repository)
+                }
+                
+            }
+            
+            lastPageRequeted = page
+            self.lastItemsLoaded = lastItemsLoaded != nil ? lastItemsLoaded! : false
+            //
+            if #available(iOS 10.0, *) {
+                tbvRepositories.refreshControl?.endRefreshing()
+            } else {
+                // Fallback on earlier versions
+            }
+            tbvRepositories.reloadData()
+        }
+    }
+    
     
     //MARK: - • TABLE VIEW
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -125,7 +162,7 @@ class RepositoryList_VC: UIViewController, UITableViewDataSource, UITableViewDel
         
         if(indexPath.row == repoArray.count - 3 && lastItemsLoaded == false) {
             
-            //TODO:REALIZAR CHAMA AO DS
+            repositoryDS.getRepositories(page: lastPageRequeted + 1)
             
         }
         
@@ -137,7 +174,8 @@ class RepositoryList_VC: UIViewController, UITableViewDataSource, UITableViewDel
     //MARK: - • ACTION METHODS
     @objc private func pullToRefresh() {
         
-        //TODO:REALIZAR CHAMA AO DS
+        repositoryDS.getRepositories(page: 1)
+        
     }
     
     //MARK: - • PRIVATE METHODS (INTERNAL USE ONLY)

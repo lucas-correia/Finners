@@ -9,7 +9,7 @@
 import UIKit
 
 protocol repositoryDSDelegate:NSObjectProtocol {
-    func didLoadRepositoryItems(repoDS:Repository_DS, repoArray:Array<Repository>?, reponse:Dictionary<String, Any>?, lastItemsLoaded:Bool?)
+    func didLoadRepositoryItems(repoDS:Repository_DS, repoArray:Array<Repository>?, reponse:Dictionary<String, Any>?, lastItemsLoaded:Bool?, page:Int)
 }
 
 class Repository_DS: NSObject {
@@ -24,7 +24,7 @@ class Repository_DS: NSObject {
                 
                 if let _:Error = error {
                     
-                    self.delegate?.didLoadRepositoryItems(repoDS: self, repoArray: nil, reponse: nil, lastItemsLoaded: nil)
+                    self.delegate?.didLoadRepositoryItems(repoDS: self, repoArray: nil, reponse: nil, lastItemsLoaded: nil, page: page)
                     
                 } else {
                     
@@ -37,11 +37,11 @@ class Repository_DS: NSObject {
                     
                     if ((array?.count)! < App.Constants.ITEMS_PER_PAGE) {
                         
-                        self.delegate?.didLoadRepositoryItems(repoDS: self, repoArray: array, reponse: response, lastItemsLoaded: true)
+                        self.delegate?.didLoadRepositoryItems(repoDS: self, repoArray: array, reponse: response, lastItemsLoaded: true, page: page)
                         
                     } else {
                         
-                        self.delegate?.didLoadRepositoryItems(repoDS: self, repoArray: array, reponse: response, lastItemsLoaded: false)
+                        self.delegate?.didLoadRepositoryItems(repoDS: self, repoArray: array, reponse: response, lastItemsLoaded: false, page: page)
                         
                     }
                     

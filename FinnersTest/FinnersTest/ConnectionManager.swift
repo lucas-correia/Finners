@@ -62,17 +62,12 @@ class ConnectionManager
     
     //MARK: - • PUBLIC METHODS
     
-    func getDataFromServer(userID:Int, handler:@escaping (_ response:Dictionary<String, Any>?, _ statusCode:Int, _ error:NSError?) -> ()){
+    func getRepositories(page:Int, handler:@escaping (_ response:Dictionary<String, Any>?, _ statusCode:Int, _ error:NSError?) -> ()){
         
         //URL destino
-        var urlRequest:String = "http://md5.jsontest.com/?text=<text>"
-        urlRequest = urlRequest.replacingOccurrences(of: "<text>", with: "erico.gimenes")
-        
-        //Parameters
-        let parameters: Parameters = [
-            "x": 5,
-            "y": 6
-        ]
+        var urlRequest:String = App.Constants.SERVICE_URL_GET_REPOSITORIES
+        urlRequest = urlRequest.replacingOccurrences(of: "<PAGE>", with: String.init(format: "%i", page))
+        urlRequest = urlRequest.replacingOccurrences(of: "<PER_PAGE>", with: String.init(format: "%i", App.Constants.ITEMS_PER_PAGE))
         
         //Headers
         let header: HTTPHeaders = self.createDefaultHeader()
@@ -80,7 +75,7 @@ class ConnectionManager
         //Request
         Alamofire.request(urlRequest,
                        method: HTTPMethod.get,
-                   parameters: parameters,
+                   parameters: nil,
                      encoding: URLEncoding.default,
                       headers: header
             ).validate().responseJSON { (dResponse) in
@@ -123,14 +118,13 @@ class ConnectionManager
     }
     
     private func createDefaultHeader() -> HTTPHeaders{
-        
-        let token:String? = UserDefaults.standard.value(forKey: "PLISTKEY_ACCESS_TOKEN") as! String?
+    
         let header: HTTPHeaders = [
             "Content-Type": "application/json",
             "Accept": "application/json",
-            "idiom": NSLocalizedString("LANGUAGE_APP", comment: ""),
-            "device_info": ToolBox.converterHelper_StringJsonFromDictionary(dictionary: getDeviceInfo() as NSDictionary, prettyPrinted: false),
-            "token": ToolBox.isNil(token as AnyObject?) ? "" :  token!
+//            "idiom": NSLocalizedString("LANGUAGE_APP", comment: ""),
+//            "device_info": ToolBox.converterHelper_StringJsonFromDictionary(dictionary: getDeviceInfo() as NSDictionary, prettyPrinted: false),
+            
         ]
         return header
     }

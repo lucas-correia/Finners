@@ -29,7 +29,7 @@ class ConstantsManager{
     
     //MARK: - ENDPOINTS SERVICOS WEB
     //=======================================================================================================
-    public static let SERVICE_URL_AUTHENTICATE_USER:String = "/api/v1/authenticate/login"
+    public static let SERVICE_URL_GET_REPOSITORIES:String = "https://api.github.com/search/repositories?q=language:Java&sort=stars&page=<PAGE>&per_page=<PER_PAGE>"
     
     
     //MARK: - DIRETORIOS E ARQUIVOS:
@@ -40,6 +40,8 @@ class ConstantsManager{
     
     //MARK: - CONSTANTS / TIME:
     //=======================================================================================================
+    public static let ITEMS_PER_PAGE:Int = 20
+    
     public static let ANIMA_TIME_SUPER_FAST:Double = 0.1
     public static let ANIMA_TIME_FAST:Double = 0.2
     public static let ANIMA_TIME_NORMAL:Double = 0.3

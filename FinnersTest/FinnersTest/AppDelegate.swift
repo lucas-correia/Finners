@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         //
         activityView = LoadingView.new(owner: self)
     
-        self.registerNotifications()
+        //self.registerNotifications()
         
         return true
     }
@@ -117,35 +117,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     //MARK: - Notifications:
     
-    func registerNotifications() {
-        
-        if #available(iOS 10.0, *) {
-            UNUserNotificationCenter.current().requestAuthorization(options: [[.alert, .sound, .badge]], completionHandler: { (granted, error) in
-                
-                if (granted) {
-                    
-                    UIApplication.shared.registerForRemoteNotifications()
-                    UNUserNotificationCenter.current().delegate = self
-                
-                }else{
-                    // Handle Error
-                    //if let err:Error = error {
-                    // code here...
-                    //}
-                }
-            })
-        } else {
-            
-            // Fallback on earlier versions:
-            let types:UIUserNotificationType = [.badge, .sound, .alert]
-            let settings = UIUserNotificationSettings.init(types: types, categories: nil)
-            UIApplication.shared.registerUserNotificationSettings(settings)
-            UIApplication.shared.registerForRemoteNotifications()
-        }
-        
-        //UIApplication.shared.applicationIconBadgeNumber = 0
-        
-    }
+//    func registerNotifications() {
+//
+//        if #available(iOS 10.0, *) {
+//            UNUserNotificationCenter.current().requestAuthorization(options: [[.alert, .sound, .badge]], completionHandler: { (granted, error) in
+//
+//                if (granted) {
+//
+//                    UIApplication.shared.registerForRemoteNotifications()
+//                    UNUserNotificationCenter.current().delegate = self
+//
+//                }else{
+//                    // Handle Error
+//                    //if let err:Error = error {
+//                    // code here...
+//                    //}
+//                }
+//            })
+//        } else {
+//
+//            // Fallback on earlier versions:
+//            let types:UIUserNotificationType = [.badge, .sound, .alert]
+//            let settings = UIUserNotificationSettings.init(types: types, categories: nil)
+//            UIApplication.shared.registerUserNotificationSettings(settings)
+//            UIApplication.shared.registerForRemoteNotifications()
+//        }
+//
+//        //UIApplication.shared.applicationIconBadgeNumber = 0
+//
+//    }
     
     public func updateTabBarController() {
         
